@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+
+
+    <style>
+        input,textarea:focus {
+            outline: none;
+        }
+
+        h, td, tr, input, textarea, select, FORM
+        {
+            font-family:고딕;
+            font-size:1em;
+            border-radius:5px;
+
+
+        }
+
+        table, FORM
+        {
+            border:1px solid rgb(0, 0, 0);
+            border-spacing:15px;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body style="background-color:#f0f5f3">
+<script>
+    function doChange(srcE, targetId){
+        var val = srcE.options[srcE.selectedIndex].value;
+        var targetE = document.getElementById(targetId);
+        removeAll(targetE);
+
+        if(val == '심화전공' || val =='자유전공'){
+            addOption('선택없음', targetE);
+        }
+        else {
+            addOption('CE', targetE);
+            addOption('MSB', targetE);
+            addOption('ME', targetE);
+            addOption('PH', targetE);
+            addOption('BiS', targetE);
+            addOption('IE', targetE);
+            addOption('ID', targetE);
+            addOption('BS', targetE);
+            addOption('CBE', targetE);
+            addOption('MAS', targetE);
+            addOption('MS', targetE);
+            addOption('NQE', targetE);
+            addOption('CS', targetE);
+            addOption('EE', targetE);
+            addOption('AE', targetE);
+            addOption('CH', targetE);
+        }
+    }
+    function addOption(value, e){
+        var o = new Option(value);
+        try{
+            e.add(o);
+        }catch(ee){
+            e.add(o, null);
+        }
+    }
+    function removeAll(e){
+        for(var i = 0, limit = e.options.length; i < limit - 1; ++i){
+            e.remove(1);
+        }
+    }
+</script>
+<center>
+    <h1> Sign Up </h1>
+    <table boder = "" bgcolor = "#FFFFFF" cellspacing = "1" >
+        <FORM action="signup.php" method="POST">
+            <tr>
+
+                <td text-align="center">ID </td>
+                <td>
+                    <input type = "text" id="id" name="id"/>
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td> Password </td>
+                <td> <input type = "password" id="pwd" name="pwd"/> </td>
+            </tr>
+
+
+            <tr>
+                <td> Name </td>
+                <td> <input type = "text" id="name" name="name"/> </td>
+            </tr>
+
+            <tr>
+                <td> Student_ID </td>
+                <td> <input type = "text" id="student_id" name="student_id"/> </td>
+            </tr>
+
+            <tr>
+                <td> Major </td>
+                <td>
+                    <select name="major" id="major">
+                        <option selected value="default">선택</option>
+                        <option value="HSS">인문<option value="CE">건환<option value="MSB">기경<option value="ME">기계
+                        <option value="PH">물리<option value="BiS">바공<option value="IE">산공<option value="ID">산디
+                        <option value="BS">생명<option value="CBE">생화공<option value="MAS">수리<option value="MS">신소재
+                        <option value="NQE">원양<option value="CS">전산<option value="EE">전자<option value="AE">항공<option value="CH">화학</select>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> Additional Major </td>
+                <td>
+                    <select id="additional" name="additional" onchange="doChange(this,'additionalMajor')">
+                        <option selected value="default">선택</option>
+                        <option value="복수전공">복수전공<option value="부전공">부전공<option value="심화전공">심화전공<option value="자유전공">자유전공
+                    </select>
+
+                    <select id="additionalMajor" name="additionalMajor" >
+                        <option selected value="default">선택</option>
+
+                    </select>
+                </td>
+
+
+
+            </tr>
+
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td >
+                    <input type = "submit" value = "Sign up"/>
+                    <input type = "reset" value = "Reset"/>
+
+                </td>
+            </tr>
+
+
+
+
+        </FORM>
+    </table>
+
+    <br/>
+
+
+
+
+</center>
+</body>
+</html>
+
+

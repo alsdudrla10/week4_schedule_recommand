@@ -1,0 +1,70 @@
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <title>User Page</title>
+</head>
+<body >
+
+<div style=" height:80px; background-color:#333333"></div>
+    <div style="width:800px; height:830px;  background-image: url(pro22.png); background-color:; float:left; margin-left:570px; background-size: 800px 830px; ">
+        <br><br><br>
+
+                    <table border="1">
+                        <tr>
+                            <td align="center"><font face="HY목각파임B"size="10" color="#00008b" align="left"> <B>회원가입 </B></font><br></td>
+                        </tr>
+
+                            <form action="user.php" method="post" >
+
+                                    <tr>
+                                        <td><font face="나눔바른고딕 UltraLight" size="4" > 이름:  <input type="text" name="username"  maxlength="30"style="background-color: powderblue; height :30px; width : 400px"></font>
+                                            <font color="" face="나눔바른고딕 UltraLight" size="4" >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;성별: </font>
+                                            <font color="#6495ed" face="나눔바른고딕 UltraLight" size="4" > 남  <input type="radio" name="gender" value = "m" maxlength="30"style="background-color: powderblue;  "></font>
+                                            <font color="#c71585" face="나눔바른고딕 UltraLight" size="4" >여  <input type="radio" name="gender" value = 'f' maxlength="30"style="background-color: powderblue;  "></font></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><font face="나눔바른고딕 UltraLight" size="4" > 아이디:  <input type="text" name="userid"  maxlength="30"style="background-color: powderblue; height :30px; width : 300px"></font>
+                                            <font face="나눔바른고딕 UltraLight" size="4" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;학과:</font>
+                                            <select name="usertype">
+                                                <option selected value="default">선택</option>
+                                                <option value="HSS">인문<option value="CE">건환<option value="MSB">기경<option value="ME">기계
+                                                <option value="PH">물리<option value="BiS">바공<option value="IE">산공<option value="ID">산디
+                                                <option value="BS">생명<option value="CBE">생화공<option value="MAS">수리<option value="MS">신소재
+                                                <option value="NQE">원양<option value="CS">전산<option value="EE">전자<option value="AE">항공<option value="CH">화학</select>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>추가학적
+                                            <select id="myMajor" name="myMajor" onchange="doChange(this,'myselect')">
+                                            <option selected value="default">선택</option>
+                                            <option value="double">복수전공<option value="alpha">부전공 <option value="free">자유융합전공 <option value="more">심화전공
+                                            </select>
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td><font face="나눔바른고딕 UltraLight" size="4" > 비밀번호:  <input type="text" name="password"  maxlength="30"style="background-color: powderblue; height :30px; width : 285px"></font>
+                                            <font face="나눔바른고딕 UltraLight" size="3" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(8~20자리 특수문자 포함)</font>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <button class="btn btn-danger" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;완료&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                            </form>
+                    </table>
+    </div>
+
+
+
+
+
